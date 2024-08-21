@@ -4,7 +4,7 @@
 **Romi Julianto**
 
 ## Deskripsi
-Program ini adalah sebuah scraper data untuk portal SSCASN. Program ini mengakses API publik SSCASN untuk mengambil data formasi yang tersedia, kemudian menyimpannya dalam bentuk file Excel dan file teks. Data yang diambil mencakup berbagai informasi mengenai formasi yang tersedia khususnya `S1-Teknik Geomatika`,
+Program ini adalah sebuah scraper data untuk portal SSCASN. Program ini mengakses API publik SSCASN untuk mengambil data formasi yang tersedia, kemudian menyimpannya dalam bentuk file Excel dan file teks. Data yang diambil mencakup berbagai informasi mengenai formasi yang tersedia khususnya `S1-Teknik Geomatika`, anda bisa mengganti untuk formasi lain dengan mengambil `kode_ref` pada web sscasn 
 
 Di bagian atas file Excel, metadata seperti `updated_at` dan `auto_update_by` ditambahkan untuk memberikan informasi tentang waktu pembaruan data dan siapa yang menjalankan program.
 
