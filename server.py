@@ -5,6 +5,7 @@ import time
 
 base_url = "https://api-sscasn.bkn.go.id/2024/portal/spf"
 kode_ref_pend = "5109923" # Kode Referensi Pendidikan S1 Teknik Geomatika
+nama_jurusan = 'S1 Teknik Geomatika'
 
 headers = {
     "accept": "application/json, text/plain, */*",
@@ -81,18 +82,16 @@ if initial_data:
         print("Menyimpan data ke file Excel...")
         with pd.ExcelWriter(excel_output_file, engine='xlsxwriter') as writer:
             workbook  = writer.book
-            worksheet = workbook.add_worksheet('S1 Teknik Geomatika')
-            writer.sheets['S1 Teknik Geomatika'] = worksheet
+            worksheet = workbook.add_worksheet(nama_jurusan)
+            writer.sheets[nama_jurusan] = worksheet
             
             worksheet.write('A1', 'updated_at')
             worksheet.write('B1', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
             worksheet.write('A2', 'auto_update_by')
             worksheet.write('B2', 'rj')
             
-            df.to_excel(writer, sheet_name='S1 Teknik Geomatika', startrow=3, index=False)
+            df.to_excel(writer, nama_jurusan, startrow=3, index=False)
             
-            for idx, link in enumerate(df['link_pengumuman'], start=4):
-                worksheet.write_url(f'L{idx}', link, string=link)
 
     print(f"Proses selesai! Data berhasil disimpan dalam file {excel_output_file} dan {txt_output_file}")
 else:
