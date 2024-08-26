@@ -14,7 +14,7 @@ Di bagian atas file Excel, metadata seperti `updated_at` dan `auto_update_by` di
 Pertama-tama, clone repository ini ke mesin lokal Anda menggunakan Git:
 
 ```bash
-git clone https://github.com/username/sscasn-scraper.git
+git clone https://github.com/romijulianto/sscasn-scraper.git
 cd sscasn-scraper
 ```
 
