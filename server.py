@@ -4,8 +4,9 @@ from datetime import datetime
 import time
 
 base_url = "https://api-sscasn.bkn.go.id/2024/portal/spf"
-kode_ref_pend = "5109923" # Kode Referensi Pendidikan S1 Teknik Geomatika
-nama_jurusan = 'S1 Teknik Geomatika'
+kode_ref_pend = "4100230"
+nama_jurusan = 'DIII Keperawatan'
+pengadaan_kd= 4
 
 headers = {
     "accept": "application/json, text/plain, */*",
@@ -15,18 +16,13 @@ headers = {
     "host": "api-sscasn.bkn.go.id",
     "origin": "https://sscasn.bkn.go.id",
     "referer": "https://sscasn.bkn.go.id/",
-    "sec-ch-ua": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
-    "sec-ch-ua-mobile": "?1",
-    "sec-ch-ua-platform": "\"Android\"",
-    "sec-fetch-dest": "empty",
-    "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site",
     "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36"
 }
 
 def fetch_data(offset, retries=3, delay=5):
     params = {
         "kode_ref_pend": kode_ref_pend,
+        "pengadaan_kd": pengadaan_kd,
         "offset": offset
     }
     
